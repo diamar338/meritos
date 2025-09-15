@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méritos</title>
+    <!-- Vincularemos nuestro archivo de CSS aquí -->
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    
+    <!-- Encabezado principal del sitio -->
+    <header>
+        <h1>Méritos</h1>
+    </header>
+
+    <!-- Barra de navegación: incluye búsqueda y un menú (en este caso, un solo botón) -->
+    <nav>
+
+           <ul class="menu">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#concursos">Concursos</a></li>
+            <li><a href="#entidades">Entidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+
+        <input type="text" id="search" placeholder="Buscar...">
+        <button onclick="buscar()">🔍 Buscar</button>
+    </nav>
+
+    <!-- Sección principal de carrusel de imágenes -->
+   <div class="carrusel-container">
+        <div class="carrusel">
+            <div class="slide active">
+                <img src="https://via.placeholder.com/800x400/ff6b6b/ffffff?text=Slide+1" alt="Slide 1">
+                <div class="caption">Primera imagen</div>
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/800x400/4ecdc4/ffffff?text=Slide+2" alt="Slide 2">
+                <div class="caption">Segunda imagen</div>
+            </div>
+            <div class="slide">
+                <img src="https://via.placeholder.com/800x400/45b7d1/ffffff?text=Slide+3" alt="Slide 3">
+                <div class="caption">Tercera imagen</div>
+            </div>
+        </div>
+   </div>        
+    <!-- Botones de navegación -->
+    <button class="prev-btn">&#10094;</button> <!-- Flecha izquierda -->
+    <button class="next-btn">&#10095;</button> <!-- Flecha derecha -->
+    
+    <!-- Indicadores de posición -->
+    <div class="indicadores">
+        <span class="indicador active" data-index="0"></span>
+        <!-- Más indicadores... -->
+          <span class="indicador" data-index="1"></span>
+            <span class="indicador" data-index="2"></span>
+    </div>
+
+    <!-- Sección de concursos -->
+    <section class="concursos">
+        <h2>Concursos</h2>
+        <div class="cards-container">
+            <div class="card">Concurso 1</div>
+            <div class="card">Concurso 2</div>
+            <div class="card">Concurso 3</div>
+        </div>
+    </section>
+
+    <!-- Sección de entidades/servicios -->
+    <section class="entidades">
+        <h2>Buscar Entidades o Servicios</h2>
+        <div class="cards-container">
+            <div class="card">Entidad 1</div>
+            <div class="card">Entidad 2</div>
+            <div class="card">Entidad 3</div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 Méritos</p>
+    </footer>
+
+    <!-- Vinculamos el archivo JS -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>

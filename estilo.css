@@ -1,0 +1,267 @@
+/* Reset de márgenes y bordes para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Barra de navegación (menú) */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    background-color: #004080;
+    align-items: center;
+    flex-wrap: wrap;  /* Permite que los elementos se acomoden en líneas si es necesario */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-right: 2rem;
+}
+
+.menu li {
+    display: inline;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #00bfff;
+}
+
+/* Barra de búsqueda */
+.search-container {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 0.5rem;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-container button {
+    padding: 0.5rem 1rem;
+    background-color: #00bfff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.search-container button:hover {
+    background-color: #0088cc;
+}
+/*estilos carusel */
+    .carousel {
+      width: 100%;
+      height: 200px;
+      background-color: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 1rem 0;
+    }
+
+    .section-title {
+      padding: 1rem;
+      font-size: 1.2rem;
+      background-color: #e6e6e6;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .card {
+      background-color: white;
+      padding: 1rem;
+      border: 1px solid #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #003366;
+      color: white;
+      margin-top: 2rem;
+    }
+
+    
+
+.carrusel-container {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0,0,0,0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+.indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicador {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.indicador.active {
+    background: white;
+    transform: scale(1.2);
+}
+
+.indicador:hover {
+    background: rgba(255,255,255,0.8);
+}
+
+/* MEDIA QUERY PARA PANTALLAS PEQUEÑAS (MÓVILES) */
+@media (max-width: 768px) {
+    /* Ajustamos la barra de navegación para pantallas pequeñas */
+    .menu {
+        display: block;  /* Cambiamos a bloque para que los elementos se acomoden en una columna */
+        margin-right: 0;
+        padding-top: 1rem;
+    }
+
+    .menu li {
+        margin-bottom: 1rem;  /* Espaciado entre los elementos */
+    }
+
+    .search-container {
+        flex-direction: column;  /* Apilamos la barra de búsqueda y el botón en una columna */
+        width: 100%;
+    }
+
+    .search-container input {
+        width: 100%;  /* La barra de búsqueda ocupa todo el ancho disponible */
+        margin-bottom: 1rem;  /* Espaciado debajo de la barra de búsqueda */
+    }
+
+    .search-container button {
+        width: 100%;  /* El botón ocupa todo el ancho disponible */
+    }
+}
+
+/* MEDIA QUERY PARA PANTALLAS MUY PEQUEÑAS (MÓVILES MÁS PEQUEÑOS) */
+
+
+@media (max-width: 480px) {
+    /* Ajustamos aún más la apariencia en pantallas más pequeñas */
+    .search-container input {
+        width: 90%;
+    }
+
+    .menu a {
+        font-size: 14px;  /* Reducimos el tamaño de fuente en el menú */
+    }
+}
+
+footer{
+    text-align: center;
+    padding: 1rem;
+    background-color: #003366;
+    color: white;
+    margin-top: 2rem;
+
+}
