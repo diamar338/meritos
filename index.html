@@ -3,88 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Méritos</title>
-    <!-- Vincularemos nuestro archivo de CSS aquí -->
-    <link rel="stylesheet" href="estilo.css">
+    <title>Tus Méritos</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
+    <!-- Encabezado -->
+    <header class="encabezado">
+        <div class="contenido-encabezado">
 
-    
-    <!-- Encabezado principal del sitio -->
-    <header>
-        <h1>Méritos</h1>
+        
+        <div class="logo">
+            <img src="/ImagenesLogo/LogoMeritosV2.png" alt="" class="imagen-logo">
+            <span>Tus Méritos</span>
+        </div>  
+
+
+            <div class="menu-centro">
+            <span onclick="mostrarAlerta('Menú')">Menú</span>
+            <span onclick="mostrarAlerta('Atención')">Atención</span>
+            <span onclick="mostrarAlerta('Servicios')">Servicios</span>
+            <span onclick="mostrarAlerta('Capacitación')">Capacitación</span>
+        </div>
+<div class="menu-derecha">
+    <span onclick="mostrarAlerta('¿Quienes Somos?')">¿Quienes Somos?</span>
+    <span onclick="mostrarAlerta('Noticias')">Noticias</span>
+</div>
+        </div>
     </header>
 
-    <!-- Barra de navegación: incluye búsqueda y un menú (en este caso, un solo botón) -->
-    <nav>
-
-           <ul class="menu">
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#concursos">Concursos</a></li>
-            <li><a href="#entidades">Entidades</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-
-        <input type="text" id="search" placeholder="Buscar...">
-        <button onclick="buscar()">🔍 Buscar</button>
-    </nav>
-
-    <!-- Sección principal de carrusel de imágenes -->
-   <div class="carrusel-container">
-        <div class="carrusel">
-            <div class="slide active">
-                <img src="https://via.placeholder.com/800x400/ff6b6b/ffffff?text=Slide+1" alt="Slide 1">
-                <div class="caption">Primera imagen</div>
-            </div>
-            <div class="slide">
-                <img src="https://via.placeholder.com/800x400/4ecdc4/ffffff?text=Slide+2" alt="Slide 2">
-                <div class="caption">Segunda imagen</div>
-            </div>
-            <div class="slide">
-                <img src="https://via.placeholder.com/800x400/45b7d1/ffffff?text=Slide+3" alt="Slide 3">
-                <div class="caption">Tercera imagen</div>
-            </div>
+    <!-- Sección de Búsqueda -->
+    <div class="contenedor-busqueda">
+        <div class="contenido-busqueda">
+            <input type="text" class="barra-busqueda" placeholder="Buscador..." id="inputBusqueda">
+            <div class="icono-usuario">👤</div>
         </div>
-   </div>        
-    <!-- Botones de navegación -->
-    <button class="prev-btn">&#10094;</button> <!-- Flecha izquierda -->
-    <button class="next-btn">&#10095;</button> <!-- Flecha derecha -->
-    
-    <!-- Indicadores de posición -->
-    <div class="indicadores">
-        <span class="indicador active" data-index="0"></span>
-        <!-- Más indicadores... -->
-          <span class="indicador" data-index="1"></span>
-            <span class="indicador" data-index="2"></span>
     </div>
 
-    <!-- Sección de concursos -->
-    <section class="concursos">
-        <h2>Concursos</h2>
-        <div class="cards-container">
-            <div class="card">Concurso 1</div>
-            <div class="card">Concurso 2</div>
-            <div class="card">Concurso 3</div>
-        </div>
-    </section>
+    <!-- Contenido Principal -->
+    <main class="contenido-principal">
+        <!-- Sección de Trámites -->
+        <section class="seccion-tramites">
+            <h2 class="titulo-tramites">Trámites</h2>
+            <div class="contenedor-tramite-unico">
+                <button class="flecha-navegacion izquierda" onclick="tramitesAnteriores()">‹</button>
+                <div class="tarjeta-tramite-unica" onclick="abrirTramiteActual()">
+                    <span id="nombreTramite">Certificado de Residencia</span>
+                    <p id="descripcionTramite">Solicita tu certificado de residencia en línea</p>
+                </div>
+                <button class="flecha-navegacion derecha" onclick="siguientesTramites()">›</button>
+            </div>
+        </section>
 
-    <!-- Sección de entidades/servicios -->
-    <section class="entidades">
-        <h2>Buscar Entidades o Servicios</h2>
-        <div class="cards-container">
-            <div class="card">Entidad 1</div>
-            <div class="card">Entidad 2</div>
-            <div class="card">Entidad 3</div>
+        <!-- Sección de Beneficios y Guía -->
+        <div class="seccion-inferior">
+            <section class="seccion">
+                <h3>Beneficios</h3>
+                <div class="contenido-seccion">
+                    <p>Aquí puedes encontrar información sobre todos los beneficios disponibles para los ciudadanos. Explora las diferentes opciones y requisitos.</p>
+                    <ul>
+                        <li>Beneficio social 1</li>
+                        <li>Beneficio social 2</li>
+                        <li>Beneficio social 3</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="seccion">
+                <h3>Guía</h3>
+                <div class="contenido-seccion">
+                    <p>Guía completa para realizar tus trámites de manera fácil y rápida. Paso a paso te ayudamos en el proceso.</p>
+                    <div class="contenedor-boton-guia">
+                        <button onclick="mostrarGuia()" class="boton-guia">Ver Guía Completa</button>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
+    </main>
 
     <!-- Pie de página -->
-    <footer>
-        <p>© 2025 Méritos</p>
+    <footer class="pie-pagina">
+        <div class="contenido-pie-pagina">
+            <div class="seccion-pie-pagina">
+                <h4>Redes</h4>
+                <p>Síguenos en nuestras redes sociales para estar al día con las últimas noticias y actualizaciones.</p>
+            </div>
+            <div class="seccion-pie-pagina">
+                <h4>Boletín Digital</h4>
+                <p>Suscríbete a nuestro boletín digital y recibe información importante directamente en tu correo.</p>
+                <form class="formulario-boletin" onsubmit="suscribirBoletin(event)">
+                    <input type="email" class="input-correo" placeholder="tu@correo.com" required>
+                    <button type="submit" class="boton-suscribir">Suscribirse</button>
+                </form>
+            </div>
+            <div class="seccion-pie-pagina">
+                <h4>Contacto</h4>
+                <p>¿Necesitas ayuda? Contáctanos a través de nuestros canales oficiales de atención al ciudadano.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- Vinculamos el archivo JS -->
-    <script src="scripts.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

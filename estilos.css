@@ -1,0 +1,492 @@
+/* Reinicio básico de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #333;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background-color: #2563eb;
+    color: white;
+    padding: 15px 0;
+}
+
+.contenido-encabezado {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-centro {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-centro span {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+.menu-centro span:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-derecha {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-derecha span {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+.menu-derecha span:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    gap: 15px;
+}
+
+.imagen-logo {
+    width: 70px;  /* Aumentamos el ancho */
+    height: 60px; /* Aumentamos la altura */
+    object-fit: contain;
+}
+
+
+.informacion-navegacion {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-left: auto;  /* ← Agrega esta línea */
+}
+
+.menu-navegacion {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-navegacion span {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.menu-navegacion span:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.informacion-noticias {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* BARRA DE BÚSQUEDA */
+.contenedor-busqueda {
+    background-color: #f8fafc;
+    padding: 20px 0;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.contenido-busqueda {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.barra-busqueda {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.barra-busqueda:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.icono-usuario {
+    width: 40px;
+    height: 40px;
+    background-color: #2563eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* CONTENIDO PRINCIPAL */
+.contenido-principal {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* SECCIÓN DE TRÁMITES */
+.seccion-tramites {
+    margin-bottom: 40px;
+}
+
+.titulo-tramites {
+    font-size: 28px;
+    color: #2563eb;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.contenedor-tramite-unico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-tramite-unica {
+    width: 350px;
+    height: 150px;
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    border: 2px solid #cbd5e1;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta-tramite-unica::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.tarjeta-tramite-unica:hover::before {
+    left: 100%;
+}
+
+.tarjeta-tramite-unica:hover {
+    border-color: #2563eb;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
+}
+
+.tarjeta-tramite-unica span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.tarjeta-tramite-unica p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.4;
+    transition: color 0.3s;
+}
+
+.tarjeta-tramite-unica:hover span {
+    color: #2563eb;
+}
+
+.tarjeta-tramite-unica:hover p {
+    color: #1d4ed8;
+}
+
+.flecha-navegacion {
+    background-color: #2563eb;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.flecha-navegacion:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+}
+
+.flecha-navegacion:active {
+    transform: scale(0.95);
+}
+
+.flecha-navegacion.izquierda:hover {
+    transform: scale(1.1) translateX(-2px);
+}
+
+.flecha-navegacion.derecha:hover {
+    transform: scale(1.1) translateX(2px);
+}
+
+/* Animación de cambio de trámite */
+.tarjeta-tramite-unica.cambiando {
+    opacity: 0;
+    transform: translateX(20px);
+}
+
+.tarjeta-tramite-unica.entrando {
+    animation: entradaTramite 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes entradaTramite {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* SECCIÓN DE BENEFICIOS Y GUÍA */
+.seccion-inferior {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.seccion {
+    flex: 1;
+}
+
+.seccion h3 {
+    font-size: 24px;
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+.contenido-seccion {
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    min-height: 150px;
+}
+
+.contenido-seccion ul {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.contenido-seccion li {
+    margin-bottom: 5px;
+}
+
+.contenedor-boton-guia {
+    margin-top: 15px;
+}
+
+.boton-guia {
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton-guia:hover {
+    background-color: #1d4ed8;
+}
+
+/* PIE DE PÁGINA */
+.pie-pagina {
+    background-color: #1e293b;
+    color: white;
+    padding: 30px 0;
+    margin-top: 40px;
+}
+
+.contenido-pie-pagina {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.seccion-pie-pagina {
+    flex: 1;
+}
+
+.seccion-pie-pagina h4 {
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+.seccion-pie-pagina p {
+    color: #cbd5e1;
+    line-height: 1.5;
+}
+
+/* FORMULARIO DEL BOLETÍN */
+.formulario-boletin {
+    margin-top: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.input-correo {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #475569;
+    border-radius: 4px;
+    background-color: #334155;
+    color: white;
+    font-size: 14px;
+}
+
+.input-correo::placeholder {
+    color: #94a3b8;
+}
+
+.input-correo:focus {
+    outline: none;
+    border-color: #2563eb;
+    background-color: #1e293b;
+}
+
+.boton-suscribir {
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.boton-suscribir:hover {
+    background-color: #1d4ed8;
+}
+
+/* DISEÑO RESPONSIVO */
+@media (max-width: 768px) {
+    .contenido-encabezado {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .informacion-navegacion {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu-navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .contenedor-tramite-unico {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tarjeta-tramite-unica {
+        width: 100%;
+        max-width: 300px;
+        height: 130px;
+    }
+
+    .flecha-navegacion {
+        width: 40px;
+        height: 40px;
+    }
+
+    .formulario-boletin {
+        flex-direction: column;
+    }
+
+    .seccion-inferior {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contenido-pie-pagina {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido-principal {
+        padding: 0 10px;
+    }
+    
+    .contenedor-tramite-unico {
+        padding: 0 10px;
+    }
+    
+    .tarjeta-tramite-unica {
+        width: 100%;
+        max-width: 280px;
+        height: 120px;
+        padding: 15px;
+    }
+
+    .flecha-navegacion {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
