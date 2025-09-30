@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tus Méritos</title>
+    <title>Méritos</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
@@ -13,42 +13,40 @@
 
         
         <div class="logo">
-            <img src="/ImagenesLogo/LogoMeritosV2.png" alt="" class="imagen-logo">
-            <span>Tus Méritos</span>
+            <img src="imagenes/people-43575_1280.png" alt="" class="imagen-logo">
+            <span>Méritos</span>
         </div>  
 
 
             <div class="menu-centro">
             <span onclick="mostrarAlerta('Menú')">Menú</span>
             <span onclick="mostrarAlerta('Atención')">Atención</span>
-            <span onclick="mostrarAlerta('Servicios')">Servicios</span>
-            <span onclick="mostrarAlerta('Capacitación')">Capacitación</span>
+            <span onclick="mostrarAlerta('¿Quienes Somos?')">¿Quienes Somos?</span>
+            <span onclick="mostrarAlerta('Noticias')">Noticias</span>
         </div>
-<div class="menu-derecha">
-    <span onclick="mostrarAlerta('¿Quienes Somos?')">¿Quienes Somos?</span>
-    <span onclick="mostrarAlerta('Noticias')">Noticias</span>
-</div>
+
         </div>
     </header>
 
-    <!-- Sección de Búsqueda -->
-    <div class="contenedor-busqueda">
-        <div class="contenido-busqueda">
-            <input type="text" class="barra-busqueda" placeholder="Buscador..." id="inputBusqueda">
-            <div class="icono-usuario">👤</div>
-        </div>
-    </div>
+   <div class="contenedor-busqueda">
+  <div class="contenido-busqueda">
+    <input type="text" class="barra-busqueda" placeholder="Buscador..." id="inputBusqueda">
+    <button onclick="manejarBusqueda()">🔍 Buscar</button>
+    <button onclick="limpiarBusqueda()">❌ Limpiar</button>
+    <div class="icono-usuario">👤</div>
+  </div>
+</div>
 
     <!-- Contenido Principal -->
     <main class="contenido-principal">
-        <!-- Sección de Trámites -->
+        <!-- Sección de concurso -->
         <section class="seccion-tramites">
-            <h2 class="titulo-tramites">Trámites</h2>
+            <h2 class="titulo-tramites">Concursos</h2>
             <div class="contenedor-tramite-unico">
                 <button class="flecha-navegacion izquierda" onclick="tramitesAnteriores()">‹</button>
                 <div class="tarjeta-tramite-unica" onclick="abrirTramiteActual()">
-                    <span id="nombreTramite">Certificado de Residencia</span>
-                    <p id="descripcionTramite">Solicita tu certificado de residencia en línea</p>
+                    <span id="nombreTramite">Concurso de méritos registraduría</span>
+                    <p id="descripcionTramite">Mantente informado de el proceso</p>
                 </div>
                 <button class="flecha-navegacion derecha" onclick="siguientesTramites()">›</button>
             </div>
@@ -59,11 +57,11 @@
             <section class="seccion">
                 <h3>Beneficios</h3>
                 <div class="contenido-seccion">
-                    <p>Aquí puedes encontrar información sobre todos los beneficios disponibles para los ciudadanos. Explora las diferentes opciones y requisitos.</p>
+                    <p>Aquí puedes encontrar información sobre todos los concursos disponibles para los ciudadanos. Explora las diferentes opciones y requisitos.</p>
                     <ul>
-                        <li>Beneficio social 1</li>
-                        <li>Beneficio social 2</li>
-                        <li>Beneficio social 3</li>
+                        <li>Concurso SENA </li>
+                        <li>CONCURSO ABIERTO DE MÉRITOS DE LA REGISTRADURIA</li>
+                        <li>Comisión Nacional del Servicio Civil </li>
                     </ul>
                 </div>
             </section>
@@ -102,6 +100,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
