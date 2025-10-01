@@ -10,6 +10,11 @@ const tramitesDisponibles = [
 
 let tramiteActualIndice = 0;
 
+
+function irA(url) {
+    window.location.href = url; 
+}
+
 /* -------------------- CARRUSEL / TRÁMITE ACTUAL -------------------- */
 function actualizarTramite() {
     const tarjeta = document.querySelector('.tarjeta-tramite-unica');
