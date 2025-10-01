@@ -10,6 +10,7 @@ const tramitesDisponibles = [
 
 let tramiteActualIndice = 0;
 
+/* -------------------- proceso para que se dirija a una url con la etiqueta span  -------------------- */
 
 function irA(url) {
     window.location.href = url; 
