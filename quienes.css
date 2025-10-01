@@ -10,6 +10,8 @@ body {
     color: #333;
 }
 
+/*4*/
+
 /* ENCABEZADO */
 .encabezado {
     background-color: #2563eb;
@@ -33,7 +35,7 @@ body {
     font-size: 24px;
     font-weight: bold;
 }
-    
+
 .imagen-logo {
     width: 70px;  /* Aumentamos el ancho */
     height: 60px; /* Aumentamos la altura */
