@@ -5,6 +5,8 @@
     box-sizing: border-box;
 }
 
+/*sebas*/
+/*sebas*/
 body {
     font-family: Arial, sans-serif;
     background-color: white;
@@ -75,7 +77,10 @@ body {
     width: 70px;  /* Aumentamos el ancho */
     height: 60px; /* Aumentamos la altura */
     object-fit: contain;
+    border: 2px solid white; /* Borde azul. */
+    border-radius: 5px;
 }
+
 
 
 .informacion-navegacion {
