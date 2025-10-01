@@ -2,7 +2,7 @@
 
 // Datos de trámites
 const tramitesDisponibles = [
-    { nombre: "Concurso de merito de registraduria", descripcion: "Ve al avance del proyecto" },
+    { nombre: "Concurso de merito de registraduria", descripcion: "Ve al avance del proceso" },
     { nombre: "CNSC", descripcion: ": La página www.cnsc.gov.co es fundamental. Acostúmbrate a revisarla" },
     { nombre: "Portal Único del Estado Colombiano: Trabaje en el Estado", descripcion: "Enlace oficial: https://www.trabajeenelestado.colombia.gov.co/" },
     
