@@ -2,12 +2,10 @@
 
 // Datos de trámites
 const tramitesDisponibles = [
-    { nombre: "concurso de ma", descripcion: "Solicita tu certificado de residencia en línea" },
-    { nombre: "Licencia de Conducir", descripcion: "Renueva o solicita tu licencia de conducir" },
-    { nombre: "Registro Civil", descripcion: "Obtén certificados de nacimiento y matrimonio" },
-    { nombre: "Permiso de Construcción", descripcion: "Solicita permisos para obras y construcciones" },
-    { nombre: "Certificado de Antecedentes", descripcion: "Solicita tu certificado de antecedentes penales" },
-    { nombre: "Registro Mercantil", descripcion: "Registra tu empresa o negocio" }
+    { nombre: "Concurso de merito de registraduria", descripcion: "Ve al avance del proyecto" },
+    { nombre: "CNSC", descripcion: ": La página www.cnsc.gov.co es fundamental. Acostúmbrate a revisarla" },
+    { nombre: "Portal Único del Estado Colombiano: Trabaje en el Estado", descripcion: "Enlace oficial: https://www.trabajeenelestado.colombia.gov.co/" },
+    
 ];
 
 let tramiteActualIndice = 0;
