@@ -69,9 +69,12 @@ body {
 .logo {
     display: flex;
     align-items: center;
+    gap: 10px;
     font-size: 24px;
-    gap: 15px;
+    font-weight: bold;
 }
+
+
 
 .imagen-logo {
     width: 70px;  /* Aumentamos el ancho */
@@ -166,7 +169,7 @@ body {
 }
 
 .titulo-tramites {
-    font-size: 28px;
+    font-size: 38px;
     color: #2563eb;
     margin-bottom: 30px;
     text-align: center;
