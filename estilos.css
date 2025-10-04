@@ -1,19 +1,30 @@
-/* Reinicio básico de estilos Hola estuve aqui*/
+/* ============================================
+   ESTILOS BASE Y RESET/
+   ============================================ */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*sebas*/
-/*sebas*/
 body {
     font-family: Arial, sans-serif;
     background-color: white;
     color: #333;
 }
 
-/* ENCABEZADO */
+/* ============================================
+   HEADER / ENCABEZADO
+   ============================================ */
+
+.icono-usuario {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
 .encabezado {
     background-color: #2563eb;
     color: white;
@@ -27,6 +38,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.imagen-logo {
+    width: 70px;
+    height: 60px;
+    object-fit: contain;
+    border: 2px solid white;
+    border-radius: 5px;
 }
 
 .menu-centro {
@@ -49,72 +76,9 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.menu-derecha {
-    display: flex;
-    gap: 20px;
-}
-
-.menu-derecha span {
-    cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-    color: white;
-}
-
-.menu-derecha span:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-
-
-.imagen-logo {
-    width: 70px;  /* Aumentamos el ancho */
-    height: 60px; /* Aumentamos la altura */
-    object-fit: contain;
-    border: 2px solid white; /* Borde azul.. */
-    border-radius: 5px;
-}
-
-
-
-.informacion-navegacion {
-    display: flex;
-    gap: 30px;
-    align-items: center;
-    margin-left: auto;  /* ← Agrega esta línea */
-}
-
-.menu-navegacion {
-    display: flex;
-    gap: 20px;
-}
-
-.menu-navegacion span {
-    cursor: pointer;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-
-.menu-navegacion span:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.informacion-noticias {
-    font-size: 16px;
-    text-align: center;
-}
-
-/* BARRA DE BÚSQUEDA */
+/* ============================================
+   BARRA DE BÚSQUEDA
+   ============================================ */
 .contenedor-busqueda {
     background-color: #f8fafc;
     padding: 20px 0;
@@ -143,6 +107,26 @@ body {
     border-color: #2563eb;
 }
 
+.bucador {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.limpiar {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .icono-usuario {
     width: 40px;
     height: 40px;
@@ -156,14 +140,18 @@ body {
     cursor: pointer;
 }
 
-/* CONTENIDO PRINCIPAL */
+/* ============================================
+   CONTENIDO PRINCIPAL
+   ============================================ */
 .contenido-principal {
     max-width: 1200px;
     margin: 40px auto;
     padding: 0 20px;
 }
 
-/* SECCIÓN DE TRÁMITES */
+/* ============================================
+   SECCIÓN DE CONCURSOS/TRÁMITES
+   ============================================ */
 .seccion-tramites {
     margin-bottom: 40px;
 }
@@ -194,7 +182,7 @@ body {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.4s;
     text-align: center;
     padding: 20px;
     position: relative;
@@ -258,36 +246,27 @@ body {
     cursor: pointer;
     border: none;
     font-size: 20px;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.3s;
     box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
 }
 
 .flecha-navegacion:hover {
     background-color: #1d4ed8;
     transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
 }
 
 .flecha-navegacion:active {
     transform: scale(0.95);
 }
 
-.flecha-navegacion.izquierda:hover {
-    transform: scale(1.1) translateX(-2px);
-}
-
-.flecha-navegacion.derecha:hover {
-    transform: scale(1.1) translateX(2px);
-}
-
-/* Animación de cambio de trámite */
+/* Animaciones de cambio de trámite */
 .tarjeta-tramite-unica.cambiando {
     opacity: 0;
     transform: translateX(20px);
 }
 
 .tarjeta-tramite-unica.entrando {
-    animation: entradaTramite 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: entradaTramite 0.4s forwards;
 }
 
 @keyframes entradaTramite {
@@ -301,7 +280,9 @@ body {
     }
 }
 
-/* SECCIÓN DE BENEFICIOS Y GUÍA */
+/* ============================================
+   SECCIÓN BENEFICIOS Y GUÍA
+   ============================================ */
 .seccion-inferior {
     display: flex;
     justify-content: space-between;
@@ -336,10 +317,6 @@ body {
     margin-bottom: 5px;
 }
 
-.contenedor-boton-guia {
-    margin-top: 15px;
-}
-
 .boton-guia {
     background-color: #2563eb;
     color: white;
@@ -348,13 +325,16 @@ body {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 15px;
 }
 
 .boton-guia:hover {
     background-color: #1d4ed8;
 }
 
-/* PIE DE PÁGINA */
+/* ============================================
+   PIE DE PÁGINA / FOOTER
+   ============================================ */
 .pie-pagina {
     background-color: #1e293b;
     color: white;
@@ -375,7 +355,7 @@ body {
     flex: 1;
 }
 
-.seccion-pie-pagina h4 {
+.seccion-pie-pagina h4 img {
     margin-bottom: 10px;
     color: #94a3b8;
 }
@@ -385,7 +365,26 @@ body {
     line-height: 1.5;
 }
 
-/* FORMULARIO DEL BOLETÍN */
+.insta {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre la imagen y el texto */
+    margin-top: 10px;
+    color: #cbd5e1;
+    margin-right: 50%;
+}
+.insta img {
+    width: 20px; /* Ajusta el tamaño del icono si es necesario */
+    height: 20px;
+}
+
+.face img {
+    width: 20px; /* Ajusta el tamaño del icono si es necesario */
+    height: 20px;
+    
+}
+
+
 .formulario-boletin {
     margin-top: 15px;
     display: flex;
@@ -421,28 +420,27 @@ body {
     cursor: pointer;
     font-size: 14px;
     transition: background-color 0.3s;
-    white-space: nowrap;
 }
 
 .boton-suscribir:hover {
     background-color: #1d4ed8;
 }
 
-/* DISEÑO RESPONSIVO */
+/* ============================================
+   RESPONSIVE - TABLETS
+   ============================================ */
 @media (max-width: 768px) {
     .contenido-encabezado {
         flex-direction: column;
         gap: 10px;
     }
 
-    .informacion-navegacion {
+    .menu-centro {
+        position: static;
+        transform: none;
         flex-direction: column;
-        gap: 15px;
-    }
-
-    .menu-navegacion {
-        flex-wrap: wrap;
-        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
     .contenedor-tramite-unico {
@@ -453,40 +451,41 @@ body {
     .tarjeta-tramite-unica {
         width: 100%;
         max-width: 300px;
-        height: 130px;
     }
 
-    .flecha-navegacion {
-        width: 40px;
-        height: 40px;
+    .seccion-inferior,
+    .contenido-pie-pagina {
+        flex-direction: column;
+        gap: 20px;
     }
 
     .formulario-boletin {
         flex-direction: column;
     }
-
-    .seccion-inferior {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .contenido-pie-pagina {
-        flex-direction: column;
-        gap: 20px;
-    }
 }
 
+/* ============================================
+   RESPONSIVE - MÓVILES
+   ============================================ */
 @media (max-width: 480px) {
     .contenido-principal {
         padding: 0 10px;
     }
-    
-    .contenedor-tramite-unico {
-        padding: 0 10px;
+
+    .contenido-busqueda {
+        flex-direction: column;
+        align-items: stretch;
     }
-    
-    .tarjeta-tramite-unica {
+
+    .contenido-busqueda button {
         width: 100%;
+    }
+
+    .titulo-tramites {
+        font-size: 22px;
+    }
+
+    .tarjeta-tramite-unica {
         max-width: 280px;
         height: 120px;
         padding: 15px;
@@ -497,37 +496,7 @@ body {
         height: 35px;
         font-size: 16px;
     }
-}
 
-@media (max-width: 768px) {
-    .menu-centro {
-        position: static;
-        transform: none;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-}
-@media (max-width: 480px) {
-    .contenido-busqueda {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .contenido-busqueda button {
-        width: 100%;
-    }
-}
-@media (max-width: 480px) {
-    .tarjeta-tramite-unica {
-        width: 100%;
-        max-width: none;
-    }
-}
-@media (max-width: 480px) {
-    .titulo-tramites {
-        font-size: 22px;
-    }
     .seccion h3 {
         font-size: 20px;
     }

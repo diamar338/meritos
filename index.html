@@ -19,22 +19,22 @@
 
 
             <div class="menu-centro">
-            <span onclick="MenuIr('Menú')">Menu</span>
-            <span onclick="AtencionIr('Atención')">Atención</span>
+            <span onclick="MenuIr('Menú')">Menú</span>
             <span onclick="irA('quienes.html')">¿Quienes Somos?</span>
-            <span onclick="NoticiasIr('Noticias')">Noticias</span>
+            <span onclick="NoticiasIr('noticias.html')">Noticias</span>
         </div>
 
         </div>
     </header>
 
-   <div class="contenedor-busqueda">
-  <div class="contenido-busqueda">
+<div class="contenedor-busqueda">
+    
+<div class="contenido-busqueda">
     <input type="text" class="barra-busqueda" placeholder="Buscador..." id="inputBusqueda">
-    <button onclick="manejarBusqueda()">🔍 Buscar</button>
-    <button onclick="limpiarBusqueda()">❌ Limpiar</button>
-    <div class="icono-usuario">👤</div>
-  </div>
+    <button class="bucador" onclick="manejarBusqueda()">🔍 Buscar</button>
+    <button class="limpiar" onclick="limpiarBusqueda()">✖ Limpiar</button>
+    <img src="imagenes/User.png" alt="imagen usuario" class="icono-usuario">
+</div>
 </div>
 
     <!-- Contenido Principal -->
@@ -84,6 +84,11 @@
             <div class="seccion-pie-pagina">
                 <h4>Redes</h4>
                 <p>Síguenos en nuestras redes sociales para estar al día con las últimas noticias y actualizaciones.</p>
+                <p class="insta"> <img src="imagenes/iconsInstagramV2.png" alt=""> TusMeritos</p>               
+                <p class="face"> <img src="imagenes/iconsFacebook.png"> TusMeritos</p>
+
+
+
             </div>
             <div class="seccion-pie-pagina">
                 <h4>Boletín Digital</h4>
@@ -96,6 +101,8 @@
             <div class="seccion-pie-pagina">
                 <h4>Contacto</h4>
                 <p>¿Necesitas ayuda? Contáctanos a través de nuestros canales oficiales de atención al ciudadano.</p>
+                <p>- 3123456789</p>
+                <p>- TusMeritos@gmail.com</p>
             </div>
         </div>
     </footer>
