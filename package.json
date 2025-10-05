@@ -4,9 +4,20 @@
   "description": "",
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "scripts.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diamar338/meritos.git"
+  },
+  "bugs": {
+    "url": "https://github.com/diamar338/meritos/issues"
+  },
+  "homepage": "https://github.com/diamar338/meritos#readme",
+  "dependencies": {
+    "express": "^5.1.0"
   }
 }

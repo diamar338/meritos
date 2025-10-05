@@ -1,4 +1,5 @@
-// scripts.js — versión corregida y completa
+
+// scripts.js — versión corregida 
 
 // Datos de trámites
 const tramitesDisponibles = [
@@ -185,7 +186,7 @@ if (!document.getElementById('estilos-mensaje')) {
     document.head.appendChild(style);
 }
 
-/* -------------------- EVENTOS AL CARGAR -------------------- */
+/* -------------------- EVENTOS AL CARGAR. -------------------- */
 document.addEventListener('DOMContentLoaded', () => {
     actualizarTramite();
 

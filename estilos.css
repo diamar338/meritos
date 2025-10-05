@@ -317,6 +317,10 @@ body {
     margin-bottom: 5px;
 }
 
+.contenedor-boton-guia {
+    margin-top: 15px;
+}
+
 .boton-guia {
     background-color: #2563eb;
     color: white;
