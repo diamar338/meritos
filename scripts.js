@@ -1,4 +1,3 @@
-// scripts.js — versión corregida 
 // Archivo principal de JavaScript que controla la interactividad del sitio
 
 // ============================================================================
