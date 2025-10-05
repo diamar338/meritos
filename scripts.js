@@ -176,7 +176,7 @@ function mostrarMensaje(mensaje, tipo = 'info') {
     }, 2500);
 }
 
-// Inyectar keyframes si no existen para evitar dependencia externa
+// -Inyectar keyframes si no existen para evitar dependencia externa
 if (!document.getElementById('estilos-mensaje')) {
     const style = document.createElement('style');
     style.id = 'estilos-mensaje';
