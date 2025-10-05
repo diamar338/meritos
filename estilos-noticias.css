@@ -1,40 +1,42 @@
 /* ============================================
-   ESTILOS BASE
-   ============================================ */
+    ESTILOS BASE Y RESET
+    Configuración inicial para toda la página de noticias
+============================================ */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Incluye padding y border en el cálculo de dimensiones */
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8fafc;
-    color: #333;
+    background-color: #f8fafc; /* Fondo gris muy claro */
+    color: #333; /* Color de texto principal */
 }
 
 /* ============================================
-   ENCABEZADO
-   ============================================ */
+    ENCABEZADO
+    Estilos consistentes con el resto del sitio
+============================================ */
 .encabezado {
-    background-color: #2563eb;
+    background-color: #2563eb; /* Azul corporativo */
     color: white;
-    padding: 15px 0;
+    padding: 15px 0; /* Espaciado vertical */
 }
 
 .contenido-encabezado {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 20px; /* Espaciado lateral */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Logo a la izquierda, menú centrado */
+    align-items: center; /* Centrado vertical */
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 10px; /* Espacio entre imagen y texto */
     font-size: 24px;
     font-weight: bold;
 }
@@ -42,165 +44,168 @@ body {
 .imagen-logo {
     width: 70px;
     height: 60px;
-    object-fit: contain;
+    object-fit: contain; /* Mantiene proporciones de la imagen */
     border: 2px solid white;
     border-radius: 5px;
 }
 
 .menu-centro {
     display: flex;
-    gap: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    gap: 20px; /* Espacio entre enlaces del menú */
+    position: absolute; /* Posicionamiento para centrado exacto */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Ajuste fino de centrado */
 }
 
 .menu-centro a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Sin subrayado */
     padding: 8px 12px;
     border-radius: 4px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s; /* Transición suave para hover */
 }
 
 .menu-centro a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente al pasar mouse */
 }
 
 .menu-centro a.activo {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo más visible para página activa */
 }
 
 /* ============================================
    CONTENIDO PRINCIPAL
-   ============================================ */
+   Área central donde se muestran las noticias
+============================================ */
 .contenido-principal {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 1000px; /* Ancho máximo más estrecho para mejor lectura */
+    margin: 40px auto; /* Centrado con espacio superior/inferior */
+    padding: 0 20px; /* Espaciado lateral */
 }
 
 .encabezado-noticias {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Para posible futura adición de filtros */
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 30px; /* Espacio debajo del título */
 }
 
 .encabezado-noticias h1 {
     font-size: 32px;
-    color: #1e293b;
+    color: #1e293b; /* Color azul oscuro */
 }
 
-
 /* ============================================
-    LISTA DE NOTICIAS
-   ============================================ */
+   LISTA DE NOTICIAS
+   Estilos para el contenedor y tarjetas de noticias
+============================================ */
 .lista-noticias {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: column; /* Apila las noticias verticalmente */
+    gap: 30px; /* Espacio entre cada tarjeta de noticia */
 }
 
 .tarjeta-noticia {
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-    display: flex;
-    gap: 20px;
-    transition: all 0.3s;
+    background-color: white; /* Fondo blanco para contraste */
+    border-radius: 12px; /* Esquinas redondeadas */
+    overflow: hidden; /* Oculta contenido que sobresalga del borde redondeado */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Sombra sutil */
+    display: flex; /* Layout horizontal: imagen + contenido */
+    gap: 20px; /* Espacio entre imagen y texto */
+    transition: all 0.3s; /* Transición suave para efectos hover */
 }
 
 .tarjeta-noticia:hover {
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.15);
-    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.15); /* Sombra más pronunciada y azulada */
+    transform: translateY(-2px); /* Efecto de levitación */
 }
 
 .imagen-noticia {
-    width: 250px;
-    min-width: 250px;
-    height: auto;
+    width: 250px; /* Ancho fijo para imágenes */
+    min-width: 250px; /* Ancho mínimo para mantener consistencia */
+    height: auto; /* Alto automático manteniendo proporción */
 }
 
 .imagen-noticia img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+    object-fit: cover; /* Recorta la imagen para llenar el contenedor manteniendo proporción */
 }
 
 .contenido-noticia {
-    padding: 25px 25px 25px 0;
-    flex: 1;
+    padding: 25px 25px 25px 0; /* Espaciado interno: 25px en todos lados excepto izquierda */
+    flex: 1; /* Ocupa el espacio restante */
 }
 
 .categoria {
-    display: inline-block;
-    background-color: #dbeafe;
-    color: #2563eb;
+    display: inline-block; /* Permite padding y no ocupa toda la línea */
+    background-color: #dbeafe; /* Fondo azul muy claro */
+    color: #2563eb; /* Texto azul */
     padding: 4px 12px;
-    border-radius: 20px;
+    border-radius: 20px; /* Forma de píldora/cápsula */
     font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 10px;
+    font-weight: 600; /* Negrita */
+    margin-bottom: 10px; /* Espacio debajo de la categoría */
 }
 
 .contenido-noticia h2 {
     font-size: 20px;
-    color: #1e293b;
-    margin-bottom: 12px;
-    line-height: 1.4;
+    color: #1e293b; /* Color azul oscuro */
+    margin-bottom: 12px; /* Espacio debajo del título */
+    line-height: 1.4; /* Espaciado entre líneas mejorado */
 }
 
 .contenido-noticia > p {
     font-size: 15px;
-    color: #475569;
-    line-height: 1.6;
-    margin-bottom: 15px;
+    color: #475569; /* Color gris azulado */
+    line-height: 1.6; /* Mejor legibilidad */
+    margin-bottom: 15px; /* Espacio debajo del párrafo */
 }
 
 .detalles-adicionales {
-    background-color: #f8fafc;
+    background-color: #f8fafc; /* Fondo gris muy claro */
     padding: 15px;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Espacio debajo de los detalles */
 }
 
 .detalles-adicionales h4 {
     font-size: 14px;
-    color: #2563eb;
-    margin-bottom: 10px;
+    color: #2563eb; /* Azul corporativo */
+    margin-bottom: 10px; /* Espacio debajo del subtítulo */
 }
 
 .detalles-adicionales ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Elimina viñetas por defecto */
+    padding: 0; /* Elimina padding por defecto */
 }
 
 .detalles-adicionales li {
     font-size: 13px;
-    color: #64748b;
-    padding: 4px 0;
-    padding-left: 18px;
-    position: relative;
+    color: #64748b; /* Color gris */
+    padding: 4px 0; /* Espaciado vertical entre items */
+    padding-left: 18px; /* Espacio para la viñeta personalizada */
+    position: relative; /* Para posicionar la viñeta personalizada */
 }
 
+/* Viñeta personalizada con pseudo-elemento */
 .detalles-adicionales li::before {
-    content: "•";
-    color: #2563eb;
+    content: "•"; /* Crea un punto como viñeta */
+    color: #2563eb; /* Color azul */
     font-weight: bold;
-    position: absolute;
-    left: 0;
+    position: absolute; /* Posiciona respecto al li */
+    left: 0; /* Alinea a la izquierda */
 }
 
 /* ============================================
-   PIE DE PÁGINA.
-   ============================================ */
+    PIE DE PÁGINA
+    Estilos consistentes con el resto del sitio
+============================================ */
 .pie-pagina {
-    background-color: #1e293b;
+    background-color: #1e293b; /* Fondo azul muy oscuro */
     color: white;
     padding: 30px 0;
-    margin-top: 60px;
+    margin-top: 60px; /* Separación del contenido principal */
 }
 
 .contenido-pie-pagina {
@@ -208,36 +213,36 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    gap: 40px;
+    gap: 40px; /* Espacio entre columnas del footer */
 }
 
 .seccion {
-    flex: 1;
+    flex: 1; /* Cada sección ocupa igual espacio */
 }
 
 .seccion h4 {
     margin-bottom: 10px;
-    color: #94a3b8;
+    color: #94a3b8; /* Color gris azulado claro */
 }
 
 .seccion p {
-    color: #cbd5e1;
+    color: #cbd5e1; /* Color gris claro */
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.5; /* Mejor legibilidad */
 }
 
 .formulario {
     margin-top: 15px;
     display: flex;
-    gap: 8px;
+    gap: 8px; /* Espacio entre input y botón */
 }
 
 .formulario input {
-    flex: 1;
+    flex: 1; /* Input ocupa espacio disponible */
     padding: 8px;
     border: 1px solid #475569;
     border-radius: 4px;
-    background-color: #334155;
+    background-color: #334155; /* Fondo oscuro */
     color: white;
 }
 
@@ -251,61 +256,61 @@ body {
 }
 
 /* ============================================
-   RESPONSIVE - TABLETS
-   ============================================ */
+DISEÑO RESPONSIVE - TABLETS (768px o menos)
+============================================ */
 @media (max-width: 768px) {
     .contenido-encabezado {
-        flex-direction: column;
+        flex-direction: column; /* Apila logo y menú verticalmente */
         gap: 15px;
     }
 
     .menu-centro {
-        position: static;
-        transform: none;
-        flex-wrap: wrap;
-        justify-content: center;
+        position: static; /* Elimina posicionamiento absoluto */
+        transform: none; /* Elimina transformación de centrado */
+        flex-wrap: wrap; /* Permite que los enlaces se envuelvan en múltiples líneas */
+        justify-content: center; /* Centra los enlaces */
     }
 
     .tarjeta-noticia {
-        flex-direction: column;
+        flex-direction: column; /* Apila imagen sobre contenido en móviles */
     }
 
     .imagen-noticia {
-        width: 100%;
-        height: 200px;
+        width: 100%; /* Imagen ocupa todo el ancho */
+        height: 200px; /* Alto fijo para imágenes en móvil */
     }
 
     .contenido-noticia {
-        padding: 20px;
+        padding: 20px; /* Espaciado uniforme en móviles */
     }
 
     .contenido-pie-pagina {
-        flex-direction: column;
+        flex-direction: column; /* Apila secciones del footer verticalmente */
         gap: 20px;
     }
 }
 
 /* ============================================
-   RESPONSIVE - MÓVILES
-   ============================================ */
+DISEÑO RESPONSIVE - MÓVILES (480px o menos)
+============================================ */
 @media (max-width: 480px) {
     .contenido-busqueda {
-        flex-wrap: wrap;
+        flex-wrap: wrap; /* Permite que elementos se envuelvan */
     }
 
     .contenido-busqueda button {
-        flex: 1;
+        flex: 1; /* Botones ocupan espacio disponible */
     }
 
     .encabezado-noticias h1 {
-        font-size: 24px;
+        font-size: 24px; /* Título más pequeño en móviles */
     }
 
     .contenido-noticia h2 {
-        font-size: 18px;
+        font-size: 18px; /* Títulos de noticia más pequeños */
     }
 
     .imagen-noticia {
-        height: 180px;
+        height: 180px; /* Imágenes ligeramente más pequeñas */
     }
 }

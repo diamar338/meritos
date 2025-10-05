@@ -1,156 +1,166 @@
+/* ============================================
+    ESTILOS BASE Y RESET
+    Configuración inicial para toda la página
+============================================ */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Modelo de caja que incluye padding y border */
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8fafc;
-    color: #333;
+    background-color: #f8fafc; /* Fondo gris muy claro */
+    color: #333; /* Color de texto principal */
 }
 
-
-
-/* ENCABEZADO */
+/* ============================================
+    ENCABEZADO
+    Estilos consistentes con el resto del sitio
+============================================ */
 .encabezado {
-    background-color: #2563eb;
+    background-color: #2563eb; /* Azul corporativo */
     color: white;
-    padding: 15px 0;
+    padding: 15px 0; /* Espaciado vertical */
 }
 
 .contenido-encabezado {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrado horizontal */
+    padding: 0 20px; /* Espaciado lateral */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Distribuye espacio entre elementos */
+    align-items: center; /* Centrado vertical */
 }
 
 .logo {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: center; /* Centra imagen y texto verticalmente */
+    gap: 10px; /* Espacio entre imagen y texto */
     font-size: 24px;
     font-weight: bold;
 }
 
 .imagen-logo {
-    width: 70px;  /* Aumentamos el ancho */
-    height: 60px; /* Aumentamos la altura */
-    object-fit: contain;
-    border: 2px solid white; /* Borde azul.. */
-    border-radius: 5px;
+    width: 70px;  /* Ancho aumentado para mejor visibilidad */
+    height: 60px; /* Alto aumentado */
+    object-fit: contain; /* Mantiene proporciones de la imagen */
+    border: 2px solid white; /* Borde blanco definido */
+    border-radius: 5px; /* Esquinas ligeramente redondeadas */
 }
 
 .menu-centro {
     display: flex;
-    gap: 20px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    gap: 20px; /* Espacio entre enlaces del menú */
+    position: absolute; /* Para centrado exacto */
+    left: 50%; /* Centrado horizontal */
+    transform: translateX(-50%); /* Ajuste fino de centrado */
 }
 
 .menu-centro a,
 .menu-derecha a {
     color: white;
-    text-decoration: none;
+    text-decoration: none; /* Sin subrayado */
     padding: 8px 12px;
-    border-radius: 4px;
+    border-radius: 4px; /* Esquinas redondeadas */
 }
 
 .menu-centro a:hover,
 .menu-derecha a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente al hover */
 }
 
 .menu-derecha a.activo {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo más visible para enlace activo */
 }
 
 .menu-derecha {
     display: flex;
-    gap: 20px;
+    gap: 20px; /* Espacio entre elementos del menú derecho */
 }
-
 
 .icono-usuario {
     width: 40px;
     height: 40px;
     background-color: #2563eb;
-    border-radius: 50%;
+    border-radius: 50%; /* Forma circular */
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
+    cursor: pointer; /* Indica que es clickeable */
 }
 
-/* CONTENIDO PRINCIPAL */
+/* ============================================
+    CONTENIDO PRINCIPAL
+    Estilos específicos para la página "Quiénes Somos"
+============================================ */
 .contenido-principal {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+    max-width: 900px; /* Ancho máximo más estrecho para mejor lectura */
+    margin: 40px auto; /* Centrado con espacio superior/inferior */
+    padding: 0 20px; /* Espaciado lateral */
 }
 
 h1 {
     font-size: 36px;
-    color: #2563eb;
-    text-align: center;
-    margin-bottom: 30px;
+    color: #2563eb; /* Azul corporativo */
+    text-align: center; /* Centrado del título */
+    margin-bottom: 30px; /* Espacio debajo del título */
 }
 
 .contenido {
-    background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white; /* Fondo blanco para contraste */
+    padding: 30px; /* Espaciado interno generoso */
+    border-radius: 8px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil para profundidad */
 }
 
 .contenido p {
     font-size: 16px;
-    line-height: 1.8;
-    margin-bottom: 20px;
-    color: #475569;
+    line-height: 1.8; /* Espaciado entre líneas mejorado para legibilidad */
+    margin-bottom: 20px; /* Espacio entre párrafos */
+    color: #475569; /* Color gris azulado para texto */
 }
 
 .fuentes {
-    background-color: #f1f5f9;
+    background-color: #f1f5f9; /* Fondo gris claro para destacar la sección */
     padding: 20px;
-    border-radius: 6px;
-    margin: 25px 0;
+    border-radius: 6px; /* Esquinas redondeadas */
+    margin: 25px 0; /* Espacio superior e inferior */
 }
 
 .fuentes h3 {
     font-size: 18px;
-    color: #2563eb;
-    margin-bottom: 10px;
+    color: #2563eb; /* Azul corporativo */
+    margin-bottom: 10px; /* Espacio debajo del subtítulo */
 }
 
 .fuentes ul {
-    list-style: none;
-    padding: 0;
+    list-style: none; /* Elimina viñetas por defecto */
+    padding: 0; /* Elimina padding por defecto */
 }
 
 .fuentes li {
-    margin-bottom: 8px;
+    margin-bottom: 8px; /* Espacio entre items de la lista */
 }
 
 .fuentes a {
-    color: #2563eb;
-    text-decoration: none;
+    color: #2563eb; /* Azul corporativo para enlaces */
+    text-decoration: none; /* Sin subrayado */
 }
 
 .fuentes a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Subrayado al pasar mouse para indicar interactividad */
 }
 
-/* PIE DE PÁGINA */
+/* ============================================
+    PIE DE PÁGINA
+    Estilos consistentes con el resto del sitio
+============================================ */
 .pie-pagina {
-    background-color: #1e293b;
+    background-color: #1e293b; /* Fondo azul muy oscuro */
     color: white;
     padding: 30px 0;
-    margin-top: 60px;
+    margin-top: 60px; /* Separación del contenido principal */
 }
 
 .contenido-pie-pagina {
@@ -158,36 +168,36 @@ h1 {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    gap: 40px;
+    gap: 40px; /* Espacio entre columnas del footer */
 }
 
 .seccion {
-    flex: 1;
+    flex: 1; /* Cada sección ocupa igual espacio */
 }
 
 .seccion h4 {
     margin-bottom: 10px;
-    color: #94a3b8;
+    color: #94a3b8; /* Color gris azulado claro */
 }
 
 .seccion p {
-    color: #cbd5e1;
+    color: #cbd5e1; /* Color gris claro */
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.5; /* Mejor legibilidad */
 }
 
 .formulario {
     margin-top: 15px;
     display: flex;
-    gap: 8px;
+    gap: 8px; /* Espacio entre input y botón */
 }
 
 .formulario input {
-    flex: 1;
+    flex: 1; /* Input ocupa espacio disponible */
     padding: 8px;
     border: 1px solid #475569;
     border-radius: 4px;
-    background-color: #334155;
+    background-color: #334155; /* Fondo oscuro */
     color: white;
 }
 
@@ -200,28 +210,31 @@ h1 {
     cursor: pointer;
 }
 
-/* RESPONSIVE */
+/* ============================================
+    DISEÑO RESPONSIVE
+    Adaptación para diferentes tamaños de pantalla
+============================================ */
 @media (max-width: 768px) {
     .contenido-encabezado {
-        flex-direction: column;
+        flex-direction: column; /* Apila logo y menú verticalmente */
         gap: 15px;
     }
 
     .menu-centro {
-        position: static;
-        transform: none;
+        position: static; /* Elimina posicionamiento absoluto */
+        transform: none; /* Elimina transformación de centrado */
     }
 
     h1 {
-        font-size: 28px;
+        font-size: 28px; /* Título más pequeño en tablets */
     }
 
     .contenido {
-        padding: 20px;
+        padding: 20px; /* Menos padding en dispositivos más pequeños */
     }
 
     .contenido-pie-pagina {
-        flex-direction: column;
+        flex-direction: column; /* Apila secciones del footer verticalmente */
         gap: 20px;
     }
 }

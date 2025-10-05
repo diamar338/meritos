@@ -7,53 +7,69 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <!-- Encabezado.. -->
+    <!-- ============================================
+        ENCABEZADO PRINCIPAL
+        Contiene el logo, menú de navegación y estructura superior del sitio
+    ============================================ -->
     <header class="encabezado">
         <div class="contenido-encabezado">
+            <!-- LOGO Y MARCA -->
+            <div class="logo">
+                <img src="imagenes/people-43575_1280.png" alt="" class="imagen-logo">
+                <span>Méritos</span>
+            </div>  
 
-        
-        <div class="logo">
-            <img src="imagenes/people-43575_1280.png" alt="" class="imagen-logo">
-            <span>Méritos</span>
-        </div>  
-
-
+            <!-- MENÚ DE NAVEGACIÓN CENTRAL -->
             <div class="menu-centro">
-            <span onclick="MenuIr('Menú')">Menú</span>
-            <span onclick="irA('quienes.html')">¿Quienes Somos?</span>
-            <span onclick="NoticiasIr('noticias.html')">Noticias</span>
-        </div>
-
+                <span onclick="MenuIr('Menú')">Menú</span>
+                <span onclick="irA('quienes.html')">¿Quienes Somos?</span>
+                <span onclick="NoticiasIr('noticias.html')">Noticias</span>
+            </div>
         </div>
     </header>
 
-<div class="contenedor-busqueda">
-    
-<div class="contenido-busqueda">
-    <input type="text" class="barra-busqueda" placeholder="Buscador..." id="inputBusqueda">
-    <button class="bucador" onclick="manejarBusqueda()">🔍 Buscar</button>
-    <button class="limpiar" onclick="limpiarBusqueda()">✖ Limpiar</button>
-    <img src="imagenes/User.png" alt="imagen usuario" class="icono-usuario">
-</div>
-</div>
+    <!-- ============================================
+        BARRA DE BÚSQUEDA
+        Sección para buscar contenido dentro del sitio
+    ============================================ -->
+    <div class="contenedor-busqueda">
+        <div class="contenido-busqueda">
+            <!-- Campo de entrada para búsquedas -->
+            <input type="text" class="barra-busqueda" placeholder="Buscador..." id="inputBusqueda">
+            <!-- Botón para ejecutar la búsqueda -->
+            <button class="bucador" onclick="manejarBusqueda()">🔍 Buscar</button>
+            <!-- Botón para limpiar el campo de búsqueda -->
+            <button class="limpiar" onclick="limpiarBusqueda()">✖ Limpiar</button>
+            <!-- Icono de usuario (posiblemente para login/perfil) -->
+            <img src="imagenes/User.png" alt="imagen usuario" class="icono-usuario">
+        </div>
+    </div>
 
-    <!-- Contenido Principal -->
+    <!-- ============================================
+        CONTENIDO PRINCIPAL
+        Aquí se encuentra el contenido central de la página
+    ============================================ -->
     <main class="contenido-principal">
-        <!-- Sección de concurso -->
+        <!-- SECCIÓN DE CONCURSOS/TRÁMITES -->
         <section class="seccion-tramites">
             <h2 class="titulo-tramites">Concursos</h2>
+            <!-- Contenedor del carrusel de trámites -->
             <div class="contenedor-tramite-unico">
+                <!-- Flecha izquierda para navegar hacia atrás en el carrusel -->
                 <button class="flecha-navegacion izquierda" onclick="tramitesAnteriores()">‹</button>
+                <!-- Tarjeta que muestra el trámite actual (clicable) -->
                 <div class="tarjeta-tramite-unica" onclick="abrirTramiteActual()">
                     <span id="nombreTramite">Concurso de méritos registraduría</span>
                     <p id="descripcionTramite">Mantente informado de el proceso</p>
                 </div>
+                <!-- Flecha derecha para navegar hacia adelante en el carrusel -->
                 <button class="flecha-navegacion derecha" onclick="siguientesTramites()">›</button>
             </div>
         </section>
 
-        <!-- .Sección de Beneficios y Guía -->
+        <!-- SECCIÓN INFERIOR: BENEFICIOS Y GUÍAS -->
         <div class="seccion-inferior">
+            <!-- Columna izquierda: Beneficios -->
             <section class="seccion">
                 <h3>Beneficios</h3>
                 <div class="contenido-seccion">
@@ -66,57 +82,66 @@
                 </div>
             </section>
 
-           <section class="seccion">
+            <!-- Columna derecha: Guías y recursos -->
+            <section class="seccion">
                 <h3>Guía</h3>
                 <div class="contenido-seccion">
                     <p>Guía completa para  visualizar los requisitos de manera fácil y rápida. Paso a paso te ayudamos en el proceso  con la registraduria para el cargo Auxiliar Administrativo.</p>
                     <div class="contenedor-boton-guia">
+                        <!-- Enlaces a documentos y recursos externos -->
                         <a href="https://wapp.registraduria.gov.co/GTH/concurso/guias/20250227_GUIA%20DE%20ORIENTACION%20AL%20ASPIRANTE%20VERIFICACION%20REQUISITOS%20MINIMOS-VRM.pdf" 
-               class="boton-guia">Ver los requisitos minimos </button></a>
-                   
-               <br><br>
-               
-               <a href="https://wapp.registraduria.gov.co/GTH/concurso/guias/20250227_GUIA%20DE%20ORIENTACION%20AL%20ASPIRANTE%20INSCRIPCIONES.pdf" 
-               class="boton-guia">Ver la guia para la inscripción </button></a>        
-               <br><br>
-               <a href="https://concurso2.esap.edu.co/rnec2025/uploads/comunicado/inscritosrnec.pdf" 
-                class="boton-guia">Listado de inscriptos</button></a>        
-               <br><br>
+                        class="boton-guia">Ver los requisitos minimos</a>
+                        
+                        <br><br>
+                        
+                        <a href="https://wapp.registraduria.gov.co/GTH/concurso/guias/20250227_GUIA%20DE%20ORIENTACION%20AL%20ASPIRANTE%20INSCRIPCIONES.pdf" 
+                        class="boton-guia">Ver la guia para la inscripción</a>        
+                        <br><br>
+                        <a href="https://concurso2.esap.edu.co/rnec2025/uploads/comunicado/inscritosrnec.pdf" 
+                        class="boton-guia">Listado de inscriptos</a>        
+                        <br><br>
 
-                <a href="https://wapp.registraduria.gov.co/GTH/concurso/legales.php" 
-                class="boton-guia">Acciones constitucionales y legales</button></a>   
+                        <a href="https://wapp.registraduria.gov.co/GTH/concurso/legales.php" 
+                        class="boton-guia">Acciones constitucionales y legales</a>   
 
-                <br><br>
+                        <br><br>
 
-                <a href="https://concurso2.esap.edu.co/rnec2025//uploads/convocatoria/2025-02-28-073155-ConvocatoriaDelegacionValledelCauca.pdf" 
-                class="boton-guia">Cargo y funciones a desempeñar</button></a>   
-
-                    </div>
+                        <a href="https://concurso2.esap.edu.co/rnec2025//uploads/convocatoria/2025-02-28-073155-ConvocatoriaDelegacionValledelCauca.pdf" 
+                        class="boton-guia">Cargo y funciones a desempeñar</a>   
                     </div>
                 </div>
             </section>
+        </div>
     </main>
 
-    <!-- Pie de página -->
+    <!-- ============================================
+        PIE DE PÁGINA
+        Información de contacto, redes sociales y newsletter
+    ============================================ -->
     <footer class="pie-pagina">
         <div class="contenido-pie-pagina">
+            <!-- Sección de redes sociales -->
             <div class="seccion-pie-pagina">
                 <h4>Redes</h4>
                 <p>Síguenos en nuestras redes sociales para estar al día con las últimas noticias y actualizaciones.</p>
+                <!-- Enlace a Instagram -->
                 <p class="insta"> <img src="imagenes/iconsInstagramV2.png" alt=""> TusMeritos</p>               
+                <!-- Enlace a Facebook -->
                 <p class="face"> <img src="imagenes/iconsFacebook.png"> TusMeritos</p>
-
-
-
             </div>
+            
+            <!-- Sección de suscripción al boletín -->
             <div class="seccion-pie-pagina">
                 <h4>Boletín Digital</h4>
                 <p>Suscríbete a nuestro boletín digital y recibe información importante directamente en tu correo.</p>
+                <!-- Formulario de suscripción -->
                 <form class="formulario-boletin" onsubmit="suscribirBoletin(event)">
                     <input type="email" class="input-correo" placeholder="tu@correo.com" required>
                     <button type="submit" class="boton-suscribir">Suscribirse</button>
                 </form>
             </div>
+            
+            <!-- Sección de contacto -->
             <div class="seccion-pie-pagina">
                 <h4>Contacto</h4>
                 <p>¿Necesitas ayuda? Contáctanos a través de nuestros canales oficiales de atención al ciudadano.</p>

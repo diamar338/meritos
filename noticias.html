@@ -7,41 +7,59 @@
     <link rel="stylesheet" href="estilos-noticias.css">
 </head>
 <body>
-    <!-- Encabezado -->
+    <!-- ============================================
+        ENCABEZADO PRINCIPAL
+        Mismo header que en index.html pero con enlace activo en Noticias
+    ============================================ -->
     <header class="encabezado">
         <div class="contenido-encabezado">
+            <!-- LOGO Y NOMBRE DEL SITIO -->
             <div class="logo">
                 <img src="imagenes/people-43575_1280.png" alt="Logo" class="imagen-logo">
                 <span>Méritos</span>
             </div>  
 
+            <!-- MENÚ DE NAVEGACIÓN -->
             <nav class="menu-centro">
                 <a href="index.html">Menú</a>
                 <a href="quienes.html">¿Quienes Somos?</a>
+                <!-- Enlace activo actual (página de noticias) -->
                 <a href="noticias.html" class="activo">Noticias</a>
             </nav>
         </div>
     </header>
 
-    <!-- Contenido Principal -->
+    <!-- ============================================
+        CONTENIDO PRINCIPAL - SECCIÓN DE NOTICIAS
+    ============================================ -->
     <main class="contenido-principal">
+        <!-- TÍTULO PRINCIPAL DE LA SECCIÓN -->
         <div class="encabezado-noticias">
             <h1>Noticias 📰</h1>
         </div>
 
-        <!-- Lista de Noticias -->
+        <!-- ============================================
+        LISTA DE NOTICIAS
+        Contenedor principal de todas las tarjetas de noticias
+        ============================================ -->
         <div class="lista-noticias">
 
-            <!-- Noticia 1 -->
+            <!-- NOTICIA 1: Vacantes SENA -->
             <article class="tarjeta-noticia">
+                <!-- IMAGEN DE LA NOTICIA -->
                 <div class="imagen-noticia">
                     <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=300&h=200&fit=crop" alt="Personas trabajando">
                 </div>
+                <!-- CONTENIDO TEXTUAL DE LA NOTICIA -->
                 <div class="contenido-noticia">
+                    <!-- CATEGORÍA O ETIQUETA DE LA NOTICIA -->
                     <span class="categoria">Empleo</span>
+                    <!-- TÍTULO PRINCIPAL DE LA NOTICIA -->
                     <h2>SENA ofrece más de 2.800 vacantes en Valle del Cauca</h2>
+                    <!-- PÁRRAFO DESCRIPTIVO DE LA NOTICIA -->
                     <p>El SENA, vía su Agencia Pública de Empleo, tiene abiertas <strong>2.811 vacantes</strong> en diferentes sectores productivos en el Valle del Cauca. Las áreas con mayor demanda son ventas y servicios, operación de equipos/oficios, finanzas/administración y procesamiento/fabricación.</p>
                     
+                    <!-- SECCIÓN DE DETALLES ADICIONALES CON LISTA -->
                     <div class="detalles-adicionales">
                         <h4>Detalles destacados:</h4>
                         <ul>
@@ -51,11 +69,10 @@
                             <li>Oportunidad para egresados y diferentes niveles de formación</li>
                         </ul>
                     </div>
-
-                    
+                </div>
             </article>
 
-            <!-- Noticia 2 -->
+            <!-- NOTICIA 2: Convocatoria Bogotá -->
             <article class="tarjeta-noticia">
                 <div class="imagen-noticia">
                     <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=300&h=200&fit=crop" alt="Oficina moderna">
@@ -74,11 +91,10 @@
                             <li>Múltiples sectores ofreciendo puestos</li>
                         </ul>
                     </div>
-
-                    
+                </div>
             </article>
 
-            <!-- Noticia 3 -->
+            <!-- NOTICIA 3: Distrito sin experiencia -->
             <article class="tarjeta-noticia">
                 <div class="imagen-noticia">
                     <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=300&h=200&fit=crop" alt="Grupo de personas">
@@ -97,18 +113,24 @@
                             <li>Variedad de tipos de trabajo disponibles</li>
                         </ul>
                     </div>
+                </div>
             </article>
 
         </div>
     </main>
 
-    <!-- Pie de página -->
+    <!-- ============================================
+        PIE DE PÁGINA
+        Misma estructura que en index.html
+    ============================================ -->
     <footer class="pie-pagina">
         <div class="contenido-pie-pagina">
+            <!-- SECCIÓN REDES SOCIALES -->
             <div class="seccion">
                 <h4>Redes</h4>
                 <p>Síguenos en nuestras redes sociales para estar al día con las últimas noticias.</p>
             </div>
+            <!-- SECCIÓN NEWSLETTER -->
             <div class="seccion">
                 <h4>Boletín Digital</h4>
                 <p>Suscríbete a nuestro boletín digital.</p>
@@ -117,6 +139,7 @@
                     <button type="submit">Suscribirse</button>
                 </form>
             </div>
+            <!-- SECCIÓN CONTACTO -->
             <div class="seccion">
                 <h4>Contacto</h4>
                 <p>¿Necesitas ayuda? Contáctanos a través de nuestros canales oficiales.</p>
