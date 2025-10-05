@@ -215,3 +215,148 @@ window.abrirTramiteActual = abrirTramiteActual;
 window.manejarBusqueda = manejarBusqueda;
 window.limpiarBusqueda = limpiarBusqueda;
 window.suscribirBoletin = suscribirBoletin;
+
+
+class MonitorClient {
+    constructor() {
+        this.socket = io();
+        this.init();
+    }
+
+    init() {
+        this.setupEventListeners();
+        this.setupSocketListeners();
+        this.loadHistory();
+        
+        // Actualizar próxima verificación (cada 30 minutos)
+        this.updateNextCheck();
+        setInterval(() => this.updateNextCheck(), 60000);
+    }
+
+    setupEventListeners() {
+        document.getElementById('checkNow').addEventListener('click', () => {
+            this.checkNow();
+        });
+
+        document.getElementById('viewHistory').addEventListener('click', () => {
+            this.loadHistory();
+        });
+    }
+
+    setupSocketListeners() {
+        this.socket.on('connect', () => {
+            this.updateConnectionStatus('Conectado', true);
+        });
+
+        this.socket.on('disconnect', () => {
+            this.updateConnectionStatus('Desconectado', false);
+        });
+
+        this.socket.on('statusUpdate', (status) => {
+            this.updateStatus(status);
+        });
+
+        this.socket.on('changeDetected', (data) => {
+            this.showChangeAlert(data);
+            this.loadHistory(); // Recargar historial
+        });
+    }
+
+    updateStatus(status) {
+        const statusElement = document.getElementById('status');
+        const lastCheckElement = document.getElementById('lastCheck');
+        
+        lastCheckElement.textContent = status.timestamp || '--';
+
+        if (status.error) {
+            statusElement.className = 'status error';
+            statusElement.innerHTML = `
+                <div class="status-icon">❌</div>
+                <div class="status-text">
+                    <strong>Error:</strong> ${status.error}
+                </div>
+            `;
+        } else if (status.hasChanged) {
+            statusElement.className = 'status changed';
+            statusElement.innerHTML = `
+                <div class="status-icon">🚨</div>
+                <div class="status-text">
+                    <strong>¡CAMBIO DETECTADO!</strong><br>
+                    El PDF ha sido modificado
+                </div>
+            `;
+        } else {
+            statusElement.className = 'status unchanged';
+            statusElement.innerHTML = `
+                <div class="status-icon">✅</div>
+                <div class="status-text">
+                    <strong>Sin cambios</strong><br>
+                    Última verificación: ${status.timestamp}
+                </div>
+            `;
+        }
+    }
+
+    updateConnectionStatus(status, isConnected) {
+        const element = document.getElementById('connectionStatus');
+        element.textContent = status;
+        element.className = isConnected ? 'connected' : 'disconnected';
+    }
+
+    updateNextCheck() {
+        const now = new Date();
+        const nextCheck = new Date(now.getTime() + 30 * 60000); // +30 minutos
+        document.getElementById('nextCheck').textContent = 
+            nextCheck.toLocaleString('es-CO');
+    }
+
+    async checkNow() {
+        try {
+            const response = await fetch('/api/status');
+            const status = await response.json();
+            this.updateStatus(status);
+        } catch (error) {
+            console.error('Error verificando ahora:', error);
+        }
+    }
+
+    async loadHistory() {
+        try {
+            const response = await fetch('/api/history');
+            const history = await response.json();
+            this.displayHistory(history);
+        } catch (error) {
+            console.error('Error cargando historial:', error);
+        }
+    }
+
+    displayHistory(history) {
+        const historyElement = document.getElementById('history');
+        historyElement.innerHTML = history.map(entry => 
+            `<div>${entry}</div>`
+        ).join('');
+    }
+
+    showChangeAlert(data) {
+        // Notificación del navegador
+        if ('Notification' in window && Notification.permission === 'granted') {
+            new Notification('🚨 Cambio Detectado - Registraduría', {
+                body: 'El cronograma ha sido actualizado',
+                icon: '/favicon.ico'
+            });
+        }
+
+        // Alert visual
+        alert(`¡CAMBIO DETECTADO!\n\nEl PDF de la Registraduría ha sido modificado.\n\nHora: ${data.timestamp}`);
+    }
+}
+
+// Inicializar cuando se cargue la página
+document.addEventListener('DOMContentLoaded', () => {
+    new MonitorClient();
+});
+
+// Solicitar permisos para notificaciones
+if ('Notification' in window) {
+    Notification.requestPermission();
+}

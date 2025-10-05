@@ -6,7 +6,22 @@
   "author": "",
   "type": "commonjs",
   "main": "scripts.js",
+
+  
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "monitor": "node monitor.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node-cron": "^3.0.2",
+    "axios": "^1.6.0",
+    "crypto": "^1.0.1",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
+    "socket.io": "^4.7.4"
   }
+
+  
 }

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor 24/7 - Registraduría</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🔍 Monitor 24/7 - Registraduría</h1>
+            <p>Monitoreo automático del cronograma de concurso de méritos 2025</p>
+        </header>
+
+        <div class="status-card">
+            <div id="status" class="status checking">
+                <div class="status-icon">⏳</div>
+                <div class="status-text">Conectando con el servidor...</div>
+            </div>
+            
+            <div class="status-details">
+                <div><strong>URL:</strong> <span id="pdfUrl">cronograma_concurso-meritos-2025_RNEC.pdf</span></div>
+                <div><strong>Última verificación:</strong> <span id="lastCheck">--</span></div>
+                <div><strong>Próxima verificación:</strong> <span id="nextCheck">--</span></div>
+                <div><strong>Estado:</strong> <span id="connectionStatus">Conectando...</span></div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button id="checkNow" class="btn btn-primary">🔎 Verificar Ahora</button>
+            <button id="viewHistory" class="btn btn-secondary">📊 Ver Historial</button>
+        </div>
+
+        <div class="history-section">
+            <h3>Historial de Cambios</h3>
+            <div id="history" class="history-log">
+                <!-- Historial se cargará aquí -->
+            </div>
+        </div>
+
+        <footer>
+            <p>🕒 Monitoreo automático cada 30 minutos - Servidor 24/7 activo</p>
+        </footer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
